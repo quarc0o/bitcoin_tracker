@@ -60,13 +60,17 @@
             
             // Iterate through the array, creating new arrays of length 20 
             // and appending them to dataToDisplay
-            for (let i = 0; i < result.length; i++) {
+            for (let i = 0; i <= result.length; i++) {
                 if (i > 0 && i % 20 == 0) {
                     this.dataToDisplay.push(tempArray)
                     tempArray = [];
+                } else if (i == result.length) {
+                    this.dataToDisplay.push(tempArray)
                 }
                 tempArray.push(result[i]);
             }
+            this.dataToDisplay[5].pop()
+            console.log(this.dataToDisplay[5])
             this.emitNumberOfPages() // After API call we let the parent - BitcoinData know the number of pages
             } catch (e) {
             console.log(e);
