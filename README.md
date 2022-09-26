@@ -1,4 +1,4 @@
-# cue_pagination
+# Vue bitcoin tracker
 
 ## Project setup
 ```
